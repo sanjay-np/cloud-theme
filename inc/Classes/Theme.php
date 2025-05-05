@@ -1,8 +1,8 @@
 <?php
 
-namespace CloudTheme\Theme\Classes;
+namespace CloudTheme\Classes;
 
-class Init
+class Theme
 {
     public function __construct()
     {
