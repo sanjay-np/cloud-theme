@@ -2,4 +2,5 @@
 
 use CloudTheme\Classes\Theme;
 
-new Theme();
+$theme = new Theme();
+$theme->init();
