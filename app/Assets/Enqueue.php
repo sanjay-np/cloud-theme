@@ -1,25 +1,14 @@
 <?php
 
-namespace CloudTheme\Classes;
+namespace CloudTheme\Assets;
 
-class Theme
+class Enqueue
 {
-    public function init()
-    {
-        add_action('wp_enqueue_scripts', [$this, 'stylesAndScripts']);
-    }
-
-    public function stylesAndScripts()
-    {
-        $this->enqueueStyleSheets();
-        $this->enqueueScripts();
-    }
-
     /**
      * add your custom theme styles 
      *
      * */
-    public function enqueueStyleSheets()
+    public function styles()
     {
         /**
          * Import Cloud Child theme style sheet
@@ -34,12 +23,12 @@ class Theme
      * add your custom theme styles 
      *
      * */
-    public function enqueueScripts()
+    public function scripts()
     {
         /**
          * Import Custom JS Script
          *
          * */
-        wp_enqueue_script('cloud-theme-script', get_stylesheet_directory_uri() . '/assets/scripts/scripts.js', ['jquery']);
+        wp_enqueue_script('cloud-theme-script', get_stylesheet_directory_uri() . '/assets/scripts/main.js', ['jquery']);
     }
 }

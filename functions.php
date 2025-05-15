@@ -1,6 +1,10 @@
 <?php
 // Load Composer autoload
+
+use CloudTheme\Core\Theme;
+
 require_once __DIR__ . '/vendor/autoload.php';
 
-//Load Theme Initialization
-require_once __DIR__ . '/inc/cloud-theme.php';
+
+$theme = new Theme();
+$theme->init();

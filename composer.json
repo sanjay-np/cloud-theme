@@ -2,7 +2,7 @@
     "name": "sanjay-np/cloud-theme",
     "autoload": {
         "psr-4": {
-            "CloudTheme\\": "inc/"
+            "CloudTheme\\": "app/"
         }
     },
     "authors": [
