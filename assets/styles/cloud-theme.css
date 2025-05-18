@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.site-header {
+    @apply flex justify-between;
+}
+
+.main-navigation {
+    @apply flex;
+}

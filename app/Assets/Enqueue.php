@@ -15,7 +15,7 @@ class Enqueue
          *
          * */
         wp_enqueue_style('cloud-theme-style', get_stylesheet_uri(), array('parent-style'));
-        wp_enqueue_style('cloud-theme-css', get_stylesheet_directory_uri() . '/assets/styles/cloud-theme.css');
+        wp_enqueue_style('cloud-theme-css', get_stylesheet_directory_uri() . '/assets/styles/cloud-theme.min.css');
     }
 
     /**

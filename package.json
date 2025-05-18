@@ -1,0 +1,14 @@
+{
+    "name": "cloud-theme",
+    "version": "1.0.0",
+    "scripts": {
+        "tailwind:watch": "tailwindcss -i ./assets/styles/cloud-theme.css -o ./assets/styles/cloud-theme.min.css --watch"
+    },
+    "license": "ISC",
+    "type": "commonjs",
+    "description": "",
+    "dependencies": {
+        "@tailwindcss/cli": "^4.1.7",
+        "tailwindcss": "^4.1.7"
+    }
+}
