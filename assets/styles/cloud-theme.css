@@ -1,9 +1,31 @@
 @import "tailwindcss";
 
+@theme {
+    --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+
+/**
+* Header Styling
+*
+* */
 .site-header {
-    @apply flex justify-between;
+    @apply container mx-auto flex justify-between py-2;
 }
 
 .main-navigation {
     @apply flex;
+}
+
+/*
+*Footer Styling
+*
+* */
+
+.site-footer {
+    @apply container mx-auto;
+
+    .site-info {
+        @apply text-center;
+    }
 }

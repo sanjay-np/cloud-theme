@@ -6,6 +6,14 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+
     <?php wp_head(); ?>
 </head>
 
@@ -41,7 +49,9 @@
 
             <!-- #site navigation-->
             <nav id="site-navigation" class="main-navigation">
-                <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', '_s'); ?></button>
+                <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                    <i data-lucide="menu"></i>
+                </button>
                 <?php
                 wp_nav_menu([
                     'theme_location' => 'menu-1',
