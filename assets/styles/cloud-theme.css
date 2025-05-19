@@ -9,13 +9,32 @@
 * Header Styling
 *
 * */
-.site-header {
-    @apply container mx-auto flex justify-between py-2;
+#masthead {
+    @apply container mx-auto flex justify-between items-center py-2;
+
+    .site-branding {
+        .site-title {
+            @apply text-2xl font-bold capitalize;
+        }
+    }
+
+    #site-navigation {
+        @apply flex;
+
+        #primary-menu {
+            @apply flex gap-3;
+
+            li {
+                @apply py-2;
+
+                a {
+                    @apply font-medium text-base text-lg;
+                }
+            }
+        }
+    }
 }
 
-.main-navigation {
-    @apply flex;
-}
 
 /*
 *Footer Styling

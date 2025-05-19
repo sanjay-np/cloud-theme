@@ -1,4 +1,5 @@
 /*! tailwindcss v4.1.7 | MIT License | https://tailwindcss.com */
+@layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -6,6 +7,14 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --spacing: 0.25rem;
+    --text-base: 1rem;
+    --text-base--line-height: calc(1.5 / 1);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -159,8 +168,11 @@
   .visible {
     visibility: visible;
   }
+  .hidden {
+    display: none;
+  }
 }
-.site-header {
+#masthead {
   width: 100%;
   @media (width >= 40rem) {
     max-width: 40rem;
@@ -179,11 +191,36 @@
   }
   margin-inline: auto;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding-block: calc(var(--spacing) * 2);
-}
-.main-navigation {
-  display: flex;
+  .site-branding {
+    .site-title {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
+      --tw-font-weight: var(--font-weight-bold);
+      font-weight: var(--font-weight-bold);
+      text-transform: capitalize;
+    }
+  }
+  #site-navigation {
+    display: flex;
+    #primary-menu {
+      display: flex;
+      gap: calc(var(--spacing) * 3);
+      li {
+        padding-block: calc(var(--spacing) * 2);
+        a {
+          font-size: var(--text-base);
+          line-height: var(--tw-leading, var(--text-base--line-height));
+          font-size: var(--text-lg);
+          line-height: var(--tw-leading, var(--text-lg--line-height));
+          --tw-font-weight: var(--font-weight-medium);
+          font-weight: var(--font-weight-medium);
+        }
+      }
+    }
+  }
 }
 .site-footer {
   width: 100%;
@@ -205,5 +242,16 @@
   margin-inline: auto;
   .site-info {
     text-align: center;
+  }
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-font-weight: initial;
+    }
   }
 }
